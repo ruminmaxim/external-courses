@@ -1,7 +1,5 @@
 function arrCounter(arr) {
-var countZero = 0;
-var countOdd = 0;
-var countEven = 0
+var countZero = 0, countOdd = 0, countEven = 0;
     for (var i=0; i<arr.length; i++) {
         if (typeof arr[i] === "number" ) {
             if (arr[i] === 0) {
@@ -15,9 +13,7 @@ var countEven = 0
             }
             } 
     }
- var final = [countEven, countOdd, countZero];
- console.log (final);
-return final;
+return [countEven, countOdd, countZero];
 }  
 
 module.exports = arrCounter;    

@@ -1,12 +1,11 @@
 function typeOfVar(x) {
-var result;
-var y = typeof x;
-if (y === 'number') {
+var result, y = typeof x;
+
+if ((y === 'number') && (isNaN(x) !== true)) {
   result = 'number';
-} else if (y === 'string') {
+} 
+else if (y === 'string') {
   result = 'string';
-} else {
-  result = undefined;  
 }
 return result;
 }
