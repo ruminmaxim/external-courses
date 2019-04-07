@@ -4,4 +4,7 @@
     <option name="FONT_FAMILY" value="Source Code Pro" />
     <option name="LINE_SPACING" value="1.1" />
   </component>
+  <component name="EditorSettings">
+    <option name="USE_SOFT_WRAPS" value="MAIN_EDITOR" />
+  </component>
 </application>
