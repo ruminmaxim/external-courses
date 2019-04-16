@@ -1,0 +1,50 @@
+#button {
+    margin: 20px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    color: #555;
+    text-shadow: 0px 1px 2px #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    background-color: #cbcbcb;
+    border-radius: 14px;
+}
+
+#button::after {
+    position: absolute;
+    color: #999;
+    top: 0;
+    right: 0px;
+    left: 0;
+    bottom: 0;
+    content: "★";
+    border: 2px solid #666;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 0 0 2px #fff;
+    z-index: 0;
+    padding: 15px 12px;
+    text-align: right;
+}
+
+
+#button::before {
+    position: absolute;
+    color: #999;
+    top: 8px;
+    right: 8px;
+    left: 8px;
+    bottom: 8px;
+    content: "★";
+    border: 1px solid #aaa;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), inset 0 20px 0 0 rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    background: #ccc;
+    background: linear-gradient(to bottom, #ddd 0%, #aaa 100%);
+    padding: 8px 8px;
+}
