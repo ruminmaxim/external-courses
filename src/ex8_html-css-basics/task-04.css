@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.transparentBlock {
+    width: 20em;
+    height: 20em;
+    background-color: rgba(226, 80, 226, 0.2);
+    position: relative;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+}
+
+.transparentBlock:before {
+    padding: 1em;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: -1em;
+    left: -1em;
+    width: 20em;
+    height: 20em;
+    background-color: rgb(122, 133, 179, 0.2);
+}
+
+#imageBlock {
+    padding: 30px;
+    background-size: contain;
+    width: 20rem;
+    height: 20rem;
+    background-image: url(https://ixxidesign.azureedge.net/media/1676571/Mickey-Mouse-2.jpg?mode=max&width=562&height=613);
+}
