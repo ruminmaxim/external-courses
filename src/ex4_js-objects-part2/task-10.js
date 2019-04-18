@@ -1,7 +1,5 @@
 function strReverse(str) {
-    var arr = str.split('');
-    arr.reverse();
-    return arr.join('');
+    return str.split('').reverse().join('');
 }
 
 module.exports = strReverse;
