@@ -1,0 +1,45 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    color: #fff;
+    background-color: #3fbbf2;
+    border-radius: 0 0 10px 10px;
+}
+
+.menu_list {
+    list-style-type: none;
+    display: none;
+}
+
+.menu_list li {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.menu_header {
+    border: 1px solid #29abe8;
+    border-top: 1px solid #71bcfa;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.menu_li_hover_toogle {
+    background-color: #1eaaf2;
+}
+
+.menu_header_hover_toogle {
+    box-shadow: 0px 0px 9px 1px #0b98d97d;
+}
+
+.menu_show_toogle {
+    display: block;
+}

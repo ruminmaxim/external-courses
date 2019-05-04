@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.article-block {
+    margin: 100px;
+    padding: 12px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: #a2dfd2 2px solid;
+}
+
+.article-block>div {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+}
+
+.article-block h1 {
+    background-image: linear-gradient(to top, #fbba2e, #ebd93a);
+    padding: 15px;
+    font-weight: normal;
+    position: relative;
+}
+
+.article-block h1:before {
+    bottom: -10px;
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 10px 10px 0px 10px;
+    border-color: #fbba2e transparent transparent transparent;
+}
+
+.article-block p {
+    margin: 20px;
+}
