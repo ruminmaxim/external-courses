@@ -1,18 +1,20 @@
 function sliceMethod(array, begin, end) {
     var newArray = [];
-    if (begin === undefined) {
-        begin = 0;
+    var beginArray = begin;
+    var endArray = end;
+    if (!beginArray) {
+        beginArray  = 0;
     }
-    if (begin < 0) {
-        begin = array.length + begin;
+    if (beginArray  < 0) {
+        beginArray  = array.length + begin;
     }
-    if (end < 0) {
-        end = array.length + end;
+    if (endArray < 0) {
+        endArray = array.length + end;
     }
-    if (end === undefined) {
-        end = array.length;
+    if (!endArray) {
+        endArray = array.length;
     }
-    for (var i = begin; i < end; i++) {
+    for (var i = beginArray; i < endArray; i++) {
         newArray.push(array[i]);
     }
     return newArray;
