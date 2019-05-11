@@ -1,5 +1,9 @@
 function Calculator() {
 
+    function isNumeric(number) {
+        return !isNaN(parseFloat(number)) && isFinite(number);
+    }
+
     this.result = 0;
 
     this.reset = function () {
@@ -8,35 +12,35 @@ function Calculator() {
     }
 
     this.add = function (number) {
-        if (number !== undefined) {
+        if (isNumeric(number) === true) {
             this.result += number;
         }
         return this;
     }
 
     this.multiply = function (number) {
-        if (number !== undefined) {
+        if (isNumeric(number) === true) {
             this.result *= number;
         }
         return this;
     }
 
     this.subtract = function (number) {
-        if (number !== undefined) {
+        if (isNumeric(number) === true) {
             this.result -= number;
         }
         return this;
     }
 
     this.divide = function (number) {
-        if (number !== undefined) {
+        if (isNumeric(number) === true) {
             this.result /= number;
         }
         return this;
     }
 
     this.setState = function (number) {
-        if (number !== undefined) {
+        if (isNumeric(number) === true) {
             this.result = number;
         }
         return this;
