@@ -1,0 +1,9 @@
+.square {
+    background-color: #0073aa;
+    width: 100px;
+    height: 100px;
+}
+table, td {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
