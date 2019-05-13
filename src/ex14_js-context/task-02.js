@@ -1,33 +1,29 @@
 function Hangman(word) {
 
-    this.guess = function (letter) {
-        check = letter.toLowerCase();
-        if (this.secretWord.indexOf(check) != -1) {
-            var userWordCreating = [];
-            for (i = 0; i < this.secretWord.length; i++) {
-                if (this.secretWord[i] === check) {
-                    userWordCreating.push(check)
-                }
-                else if (this.userWord[i] != '_') {
-                    userWordCreating.push(this.userWord[i])
-                }
-                else {
-                    userWordCreating.push('_')
-                }
-            }
-            this.userWord = userWordCreating.join("");
-            console.log(this.userWord);
-            if (this.secretWord == this.userWord) {
-                console.log('You won!');
-            }
-        }
-        else {
+    this.guess = function (check) {
+        if (this.secretWord.indexOf(check) === -1) {
             this.errorsLeft -= 1;
             this.wrongLetters.push(check);
             console.log('wrong letter, attempts left ' + this.errorsLeft + ' | ' + this.wrongLetters);
         }
-        return this;
-    }
+        let secretArr = this.secretWord.split('');
+        let outputArr = this.userWord.split('');
+        var result = secretArr.reduce(function (result, nextLetter, index) {
+            if (nextLetter === check) {
+                return result + check;
+            }
+            else if (outputArr[index] !== '_') {
+                return result + outputArr[index];
+            } 
+                return result + '_';
+            
+        }, '');
+        this.userWord = result;
+        if (this.secretWord == this.userWord) {
+            console.log('You won!');
+        }
+        return this.userWord;
+    };
 
     this.getGuessedString = function () {
         console.log(this.userWord);
