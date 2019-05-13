@@ -387,12 +387,21 @@ main {
   color: #fdcf03;
 }
 
-.rating.star-hover>span {
+.rating.star_hover>span {
   content: "";
   cursor: pointer;
 }
 
-.rating.star-hover>span:hover:before, .rating.star-hover>span:hover~span:before {
+.rating.star_hover>span:hover:before, .rating.star_hover>span:hover~span:before {
+  content: "";
+  color: #fdcf03;
+}
+
+span.rated:before {
+  content: "";
+}
+
+.rating.star_hover>span.rated~span:before {
   content: "";
   color: #fdcf03;
 }
@@ -400,9 +409,11 @@ main {
 /* FOOTER */
 
 .footer {
+  bottom: 0px;
+  width: 100%;
+  position: fixed;
   display: flex;
-  flex: 1 1 auto;
-  height: 50px;
+  height: 46px;
   background-color: #181e2c;
   flex-direction: row-reverse;
 }

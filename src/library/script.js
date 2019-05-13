@@ -1,5 +1,5 @@
 // Getting data
-var dataObject = dataRequest();
+let dataObject = dataRequest();
 function dataRequest() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://rsu-library-api.herokuapp.com/books', false);
@@ -23,6 +23,7 @@ function createBook(anotherBook) {
     // Container of book
     var bookContainer = document.createElement('div');
     bookContainer.classList.add('book');
+    bookContainer.setAttribute('data-book', anotherBook.id);
 
     // Cover of book
     var bookCover = document.createElement('div');
@@ -30,6 +31,7 @@ function createBook(anotherBook) {
     bookContainer.appendChild(bookCover);
     var newCover = document.createElement('img');
     newCover.src = anotherBook.image_url;
+    newCover.alt = anotherBook.title;
     bookCover.appendChild(newCover);
 
     // Title of book
@@ -47,20 +49,58 @@ function createBook(anotherBook) {
     bookAuthor.appendChild(newAuthor);
 
     // Rating of book
-    var rating = createRating(rating);
+    var rating = createRating(rating, anotherBook);
     bookContainer.appendChild(rating);
 
     return bookContainer;
 }
 
 // Creating rating of book
-function createRating(rating) {
+function createRating(rating, anotherBook) {
     var stars = document.createElement('div');
     stars.classList.add('rating');
-    stars.classList.add('star-hover');
+    stars.classList.add('star_hover');
     for (var i = 1; i <= 5; i++) {
         var star = document.createElement('span');
+        star.classList.add('star');
         stars.appendChild(star);
+        if (6 - i === anotherBook.rating) {
+            star.classList.add('rated');
+        }
+        star.setAttribute('data-rating', 6 - i)
     }
     return stars;
 }
+
+//Change Rating by click
+
+var allRatings = document.querySelectorAll('div.rating.star_hover');
+for (var i = 0; i < allRatings.length; i++) {
+    allRatings[i].addEventListener('click', function () {
+        var target = event.target;
+        if (target.className === 'star') {
+            rate(target);
+        }
+        else if (target.className === 'star rated') {
+            unrate(target)
+        };
+    });
+}
+
+function rate(target) {
+    var counterRating = Number(target.dataset.rating);
+    var bookNumber = Number(target.parentElement.parentElement.dataset.book);
+    dataObject[bookNumber - 1].rating = counterRating;
+    target.parentNode.childNodes.forEach(element => {
+        element.classList.remove('rated');
+    });
+    target.classList.add('rated');
+}
+
+function unrate(target) {
+    var bookNumber = Number(target.parentElement.parentElement.dataset.book);
+    dataObject[bookNumber - 1].rating = 0;
+    target.classList.remove('rated');
+}
+
+
