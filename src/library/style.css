@@ -406,14 +406,13 @@ span.rated:before {
   color: #fdcf03;
 }
 
+
 /* FOOTER */
 
 .footer {
   bottom: 0px;
   width: 100%;
-  position: fixed;
   display: flex;
-  height: 46px;
   background-color: #181e2c;
   flex-direction: row-reverse;
 }
@@ -425,7 +424,7 @@ span.rated:before {
   background-color: #15a4fa;
   color: #fff;
   align-items: center;
-  padding: 0 18px;
+  padding: 16px;
   font-size: 18px
 }
 
@@ -436,6 +435,6 @@ span.rated:before {
   background-color: #1f2637;
   color: #fff;
   align-items: center;
-  padding: 0 18px;
+  padding: 16px;
   font-size: 18px
 }
