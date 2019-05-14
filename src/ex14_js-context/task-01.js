@@ -12,35 +12,35 @@ function Calculator() {
     }
 
     this.add = function (number) {
-        if (isNumeric(number) === true) {
+        if (isNumeric(number)) {
             this.result += number;
         }
         return this;
     }
 
     this.multiply = function (number) {
-        if (isNumeric(number) === true) {
+        if (isNumeric(number)) {
             this.result *= number;
         }
         return this;
     }
 
     this.subtract = function (number) {
-        if (isNumeric(number) === true) {
+        if (isNumeric(number)) {
             this.result -= number;
         }
         return this;
     }
 
     this.divide = function (number) {
-        if (isNumeric(number) === true) {
+        if (isNumeric(number)) {
             this.result /= number;
         }
         return this;
     }
 
     this.setState = function (number) {
-        if (isNumeric(number) === true) {
+        if (isNumeric(number)) {
             this.result = number;
         }
         return this;
