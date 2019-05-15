@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 Contact Form</title>
+    <link rel="stylesheet" media="screen" href="task.css">
+</head>
+
+<body>
+    <form class="contact_form" name="contact_form">
+        <h2>Form Here</h2>
+        <span class="required">* required fields</span>
+        <div class="separator"></div>
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="placeholder text" />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="placeholder text" />
+            <span class="form_hint">Form field hint</span>
+        </div>
+
+        <div class="form-group">
+            <label for="website">Website:</label>
+            <input type="text" id="website" name="website" placeholder="placeholder text" />
+            <span class="form_hint">Form field hint</span>
+        </div>
+
+        <div class="form-group">
+            <label for="message" class="message">Message:</label>
+            <textarea name="message" id="message" rows="5" cols="50"></textarea>
+        </div>
+
+    </form>
+</body>
+
+</html>
