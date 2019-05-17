@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Library</title>
+  <link rel="stylesheet" media="screen" href="style.css">
+</head>
+
+<body>
+  <main>
+    <nav>
+      <div class="navigation">
+        <div class="navigation_user"> <img src="https://pp.userapi.com/c856136/v856136763/35e73/Fi6vHTmi41s.jpg" alt="John Doe">John Doe</div>
+        <ul class="navigation_menu">
+          <li>
+            <a href="#">Help Center</a>
+          </li>
+          <li>
+            <a href="#">Our suppport</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="sidebar">
+        <input type="button" class="add_book_button" onclick="location.href='#add_book_modal';" value="+ ADD A BOOK">
+        <div class="sidebar_separator"></div>
+        <ul class="sidebar_menu">
+          <li><span></span>Now reading</li>
+          <li><span></span>Browse</li>
+          <li><span></span>Buy Books</li>
+          <li><span></span>Favourite Books</li>
+          <li><span></span>Wishlist</li>
+          <li><span></span>History</li>
+        </ul>
+        <div class="sidebar_separator"></div>
+        <ul class="menu_tags">
+          <li><span>•</span>Must Read Titles</li>
+          <li><span>•</span>Best Of List</li>
+          <li><span>•</span>Classic Novels</li>
+          <li><span>•</span>Non Fiction</li>
+        </ul>
+        <div class="sidebar_separator"></div>
+        <div class="menu_history">
+          <span class="menu_history_icon"></span>
+          <div>
+            <span>You added <b>Fight Club</b> by <b>Chuck Palahniuk</b> to your <b>Must Read</b> Titles. </span>
+            <span>24 minutes ago</span>
+          </div>
+        </div>
+        <div class="menu_history">
+          <span class="menu_history_icon"></span>
+          <div>
+            <span>You added <b>Fight Club</b> by <b>Chuck Palahniuk</b> to your <b>Must Read</b> Titles. </span>
+            <span>24 minutes ago</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="content_books">
+        <div class="content_books_header">
+          Browse Available Books
+        </div>
+        <div class="content_books_filterBar">
+          <ul class="content_books_filterBar_category">
+            <li id="active_category">
+              <a href="#">All Books</a>
+            </li>
+            <li>
+              <a href="#">Most Recent</a>
+            </li>
+            <li>
+              <a href="#">Most Popular</a>
+            </li>
+            <li>
+              <a href="#">Free Books</a>
+            </li>
+          </ul>
+          <div class="content_books_filterBar_search">
+            <input class="content_books_filterBar_search" name="content_books_filterBar_search"
+              placeholder="Enter Keywords">
+          </div>
+        </div>
+        <div class="content_books_grid">
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer_settings"></div>
+      <div class="footer_question"></div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
