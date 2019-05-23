@@ -44,8 +44,9 @@ main {
 }
 
 .addBookButton {
+  cursor: pointer;
   font-family: 'ProximaBold';
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   border-radius: 6px;
   font-weight: 800;
@@ -73,17 +74,20 @@ main {
   list-style-type: none;
 }
 
-.menuSidebar li {
+.menuSidebar a {
+  width: 100%;
   display: block;
   padding: 10px 20px;
+  text-decoration: none;
+  color: #78829d;
 }
 
-.menuSidebar li:hover {
+.menuSidebar a:hover {
   color: #fff;
   background-color: #15a4fa;
 }
 
-.menuSidebar li span {
+.menuSidebar a span {
   font-family: 'FontAwesome';
   font-size: 16px;
   margin: 0 10px 0 0;
