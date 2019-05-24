@@ -1,0 +1,7 @@
+.circle {
+    border-radius: 50%;
+}
+
+.music {
+    -webkit-mask-image: url(http://aux2.iconspalace.com/uploads/music-icon-256-1460334822.png);
+}
