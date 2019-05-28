@@ -22,9 +22,6 @@ h4 {
     margin: 0 0 20px 0;
 }
 
-
-
-
 /* HEADER */
 
 .header {
@@ -55,48 +52,40 @@ h4 {
     justify-content: center;
 }
 
-
-
-
 /* CONTACTS*/
 
-.phone-icon,
-.map-icon,
-.mail-icon {
+.contacts>div {
     flex-basis: 26px;
+    width: 30px;
     height: 30px;
     display: flex;
     justify-content: center;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
+    margin: 0 12px;
 }
 
-.phone-icon {
-    background-image: url('img/phone29x29.svg');
+.contacts>div img:hover {
+    filter: saturate(1);
 }
 
-.map-icon {
-    background-image: url('img/map25x34.svg');
+.contacts>div img {
+    filter: saturate(0);
 }
 
-.map-icon:hover {
-    background-image: url('img/map25x34-hover.svg');
-}
-
-.mail-icon {
-    background-image: url('img/mail30x24.svg');
-}
-
-.contacts-separator {
+.contacts>div:before {
+    position: absolute;
+    left: 38px;
+    content: "";
     width: 1px;
     height: 30px;
-    margin: 0 15px;
     background-color: #bcbec3;
 }
 
-
-
+.contacts>div:last-child:before {
+    display: none;
+}
 
 /* MAP-TIP*/
 
@@ -118,9 +107,7 @@ h4 {
     display: block;
 }
 
-
-.map-tip:after,
-.map-tip:before {
+.map-tip:after, .map-tip:before {
     top: 94%;
     left: 50%;
     border: solid transparent;
@@ -129,7 +116,6 @@ h4 {
     width: 0;
     position: absolute;
     pointer-events: none;
-
 }
 
 .map-tip:after {
@@ -146,9 +132,6 @@ h4 {
     margin-left: -13px;
     transform: scaleY(0.75);
 }
-
-
-
 
 /* NAVIGATION*/
 
@@ -198,14 +181,10 @@ nav {
     background-image: url('img/active35x8.svg');
 }
 
-
 #menu-active a {
     text-transform: uppercase;
     color: #1faae2
 }
-
-
-
 
 /* SEARCH */
 
@@ -229,12 +208,8 @@ nav {
 }
 
 .search-mob {
-    display:none;
+    display: none;
 }
-
-
-
-
 
 /* BANNER*/
 
@@ -269,9 +244,6 @@ nav {
     height: 90px;
     content: url('img/and88x90.svg')
 }
-
-
-
 
 /* GALLARY*/
 
@@ -317,10 +289,8 @@ nav {
     background-image: url('img/card3.jpg');
 }
 
-
-
-
 /* GALLARY-LIKE*/
+
 .gallery-like {
     display: flex;
     width: 100%;
@@ -346,15 +316,10 @@ nav {
     color: #fff;
 }
 
-
 #card3-like {
     background-color: rgba(254, 235, 117, 0.9);
     color: #cc9800;
-    
 }
-
-
-
 
 /*ABOUT*/
 
@@ -371,7 +336,6 @@ nav {
     display: flex;
     align-items: flex-start;
     margin: 0 20px;
-
 }
 
 .about-block div {
@@ -393,74 +357,5 @@ nav {
     width: 35px;
     height: 5px;
     background: #3687c4;
-    box-shadow:
-        0 10px 0 0 #3687c4,
-        0 20px 0 0 #3687c4;
+    box-shadow: 0 10px 0 0 #3687c4, 0 20px 0 0 #3687c4;
 }
-
-
-
-
-
-
-/*MOBILE*/
-
-@media screen and (min-width: 320px) and (max-width: 960px) {
-
-    .about {
-        flex-direction: column;
-    }
-
-    .menu-mob {
-        display: flex;
-        position: absolute;
-        top: 5px;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .logo-mob {
-        display: flex;
-        margin: 0 auto;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .header {
-        align-items: center;
-        height: 80px;
-        justify-content: space-between;
-
-    }
-
-    .contacts {
-        display: none;
-    }
-
-    .gallery {
-        display: none;
-    }
-
-    .about-block {
-        flex: 0;
-        margin: 20px;
-
-    }
-
-    .search-mob {
-        display: flex;
-        position: absolute;
-        right:0px;
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 640px) {
-    .search input {
-        display: none;
-    }
-
-} 

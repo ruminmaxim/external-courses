@@ -1,26 +1,26 @@
-table {
+.directory {
     color: #435369;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
 
-tr {
+.directory tr {
     background-color: #E3EAF3;
 }
 
-tr:nth-child(2n) {
+.directory tr:nth-child(2n) {
     background: #F2F6FA;
 }
 
-td {
+.directory td {
     padding: 15px 20px;
 }
 
-td:first-child {
+.directory td:first-child {
     text-transform: capitalize;
 }
 
-th {
+.directory th {
     background-color: #E8EDF4;
     font-weight: 800;
     text-transform: uppercase;
@@ -28,6 +28,6 @@ th {
     padding: 6px 20px;
 }
 
-tr:hover {
+.directory tr:hover {
     background-color: #E2E5E9;
 }
