@@ -1,0 +1,33 @@
+.directory {
+    color: #435369;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.directory tr {
+    background-color: #E3EAF3;
+}
+
+.directory tr:nth-child(2n) {
+    background: #F2F6FA;
+}
+
+.directory td {
+    padding: 15px 20px;
+}
+
+.directory td:first-child {
+    text-transform: capitalize;
+}
+
+.directory th {
+    background-color: #E8EDF4;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 6px 20px;
+}
+
+.directory tr:hover {
+    background-color: #E2E5E9;
+}

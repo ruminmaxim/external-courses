@@ -1,0 +1,61 @@
+/*MOBILE*/
+
+@media screen and (min-width: 320px) and (max-width: 960px) {
+
+    .about {
+        flex-direction: column;
+    }
+
+    .menu-mob {
+        display: flex;
+        position: absolute;
+        top: 5px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo-mob {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .header {
+        align-items: center;
+        height: 80px;
+        justify-content: space-between;
+
+    }
+
+    .contacts {
+        display: none;
+    }
+
+    .gallery {
+        display: none;
+    }
+
+    .about-block {
+        flex: 0;
+        margin: 20px;
+
+    }
+
+    .search-mob {
+        display: flex;
+        position: absolute;
+        right:0px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+    .search input {
+        display: none;
+    }
+
+} 
