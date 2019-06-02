@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Library</title>
+  <link rel="stylesheet" media="screen" href="style.css">
+</head>
+
+<body>
+  <main>
+    <nav>
+      <div class="navigation">
+        <div class="navigation_user"> <img src="https://pp.userapi.com/c856136/v856136763/35e73/Fi6vHTmi41s.jpg"
+            alt="John Doe">John Doe</div>
+        <ul class="navigation_menu">
+          <li>
+            <a href="#">Help Center</a>
+          </li>
+          <li>
+            <a href="#">Our suppport</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="sidebar">
+        <input type="button" class="add_book_button" onclick="location.href='#add_book_modal';" value="+ ADD A BOOK">
+        <div class="sidebar_separator"></div>
+        <ul class="sidebar_menu">
+          <li><span></span>Now reading</li>
+          <li><span></span>Browse</li>
+          <li><span></span>Buy Books</li>
+          <li class="tag"><span></span>Favourite Books</li>
+          <li><span></span>Wishlist</li>
+          <li><span></span>History</li>
+        </ul>
+        <div class="sidebar_separator"></div>
+        <ul class="menu_tags">
+          <li class="tag" data-tag="must_read"><span>•</span>Must Read Titles</li>
+          <li class="tag" data-tag="best"><span>•</span>Best Of List</li>
+          <li class="tag" data-tag="classic"><span>•</span>Classic Novels</li>
+          <li class="tag" data-tag="non_fiction"><span>•</span>Non Fiction</li>
+        </ul>
+        <div class="sidebar_separator"></div>
+        <div class="menu_history">
+          <span class="menu_history_icon"></span>
+          <div>
+            <span>You added <b>Fight Club</b> by <b>Chuck Palahniuk</b> to your <b>Must Read</b> Titles. </span>
+            <span>24 minutes ago</span>
+          </div>
+        </div>
+        <div class="menu_history">
+          <span class="menu_history_icon"></span>
+          <div>
+            <span>You added <b>Fight Club</b> by <b>Chuck Palahniuk</b> to your <b>Must Read</b> Titles. </span>
+            <span>24 minutes ago</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="content_books">
+        <div class="content_books_header">
+          Browse Available Books
+        </div>
+        <div class="content_books_filterBar">
+          <ul class="content_books_filterBar_category">
+            <li class="sort_by active_category" data-category="id">
+              All Books
+            </li>
+            <li class="sort_by" data-category="date">
+              Most Recent
+            </li>
+            <li class="sort_by" data-category="rating">
+              Most Popular
+            </li>
+            <li class="sort_by" data-category="free">
+              Free Books
+            </li>
+          </ul>
+          <div class="content_books_filterBar_search">
+            <input class="content_books_filterBar_search" name="content_books_filterBar_search"
+              placeholder="Enter Keywords">
+          </div>
+        </div>
+        <div class="content_books_grid">
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer_settings"></div>
+      <div class="footer_question"></div>
+    </div>
+    <div id="add_book_modal" class="add_book_modal">
+        <div>
+          <a href="#close" title="Close" class="add_book_modal_close">X</a>
+          <div class="add_book_modal_header">
+            Add book
+          </div>
+          <form onsubmit="addNewBook();return false;">
+            <div class="add_book_modal_content">
+              <div>
+                <div class="field">
+                  <label for="name">Title of book</label>
+                  <input type="text" pattern=".+" required id="name">
+                </div>
+                <div class="field">
+                  <label for="first_name">Author First Name</label>
+                  <input type="text" pattern=".+" required id="first_name">
+                </div>
+                <div class="field">
+                  <label for="last_name">Author Last Name</label>
+                  <input type="text" pattern=".+" required id="last_name"
+                    name="last_name">
+                </div>
+                <div class="field_ckeckboxes">
+                  <p>
+                    Categories:
+                  </p>
+                  <div>
+                    <input type="checkbox" id="must_read" name="must_read">
+                    <label for="must_read">Must Read</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="best" name="best">
+                    <label for="best">Best of list</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="classic" name="classic">
+                    <label for="classic">Classic novels</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="non_fiction" name="non_fiction">
+                    <label for="non_fiction">Non fiction</label>
+                  </div>
+                </div>
+                <div class="add_book_rating">
+                  <p>Rating</p>
+                  <div class="newbook rating">
+                    <span class="star" data-rating="5"></span>
+                    <span class="star" data-rating="4"></span>
+                    <span class="star" data-rating="3"></span>
+                    <span class="star" data-rating="2"></span>
+                    <span class="star" data-rating="1"></span></div>
+                </div>
+              </div>
+              <div class="add_book_modal_cover">
+                <span>Add cover</span>
+                <div class="add_book_modal_cover_icon">+</div>
+              </div>
+            </div>
+            <div class="add_book_modal_button_cont">
+              <input type="submit" class="add_book_button" value="+ ADD A BOOK">
+            </div>
+          </form>
+        </div>
+      </div>
+  </main>
+  <script src="./utils/callApi.js"></script>
+  <script src="./utils/debounce.js"></script>
+  <script src="./controllers/controller.js"></script>
+  <script src="./models/model.js"></script>
+  <script src="./views/view.js"></script>
+</body>
+
+</html>
